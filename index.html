@@ -219,7 +219,7 @@ textarea{width:100%;background:var(--paper);border:1px solid var(--line);border-
   .you-grid{grid-template-columns:1fr}.you-card.span{grid-column:span 1}.you-fields{grid-template-columns:1fr}.you-numbers{grid-template-columns:1fr 1fr}
   .drop{height:180px}
 }
-`;(0,sc.createRoot)(document.getElementById("root")).render((0,s.jsx)(Oh,{}));"serviceWorker"in navigator&&navigator.serviceWorker.register("./sw.js").catch(()=>{});})();
+`;(0,sc.createRoot)(document.getElementById("root")).render((0,s.jsx)(Oh,{}));"serviceWorker"in navigator&&navigator.serviceWorker.register("./sw.js").then(r=>r.update()).catch(()=>{});})();
 /*! Bundled license information:
 
 react/cjs/react.production.min.js:
