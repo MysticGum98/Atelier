@@ -14,7 +14,7 @@
 <link rel="icon" href="./icon.png">
 <link rel="manifest" href='data:application/manifest+json,{"name":"Atelier","short_name":"Atelier","start_url":"./","display":"standalone","background_color":"%231E1510","theme_color":"%231E1510","icons":[{"src":"icon.png","sizes":"512x512","type":"image/png"}]}'>
 <style>html,body{margin:0;background:#1E1510}#root{min-height:100vh}body{padding-bottom:env(safe-area-inset-bottom)}</style>
-<style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"><style id="atelier">
+<style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><style>#boot{position:fixed;inset:0;background:#1E1510;display:flex;align-items:center;justify-content:center;z-index:200;transition:opacity .45s ease}#boot span{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:30px;color:#EDE5D3;letter-spacing:.02em}#boot.gone{opacity:0;pointer-events:none}</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"><style id="atelier">
 :root{
   --shell:#1E1510;          /* walnut, near-black */
   --shell-2:#2A1E15;        /* lifted walnut for surfaces on the shell */
@@ -334,8 +334,8 @@ input[type=color]{width:44px;height:38px;border:1px solid var(--line);border-rad
 
 /* picker drawers */
 .pinned-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
-.pinned{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);border:0;padding:7px 11px 7px 7px;border-radius:999px;font-size:13px;font-weight:500}
-.pinned img{width:20px;height:20px;border-radius:50%;object-fit:cover}
+.pinned-row .pinned{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);border:0;padding:7px 11px 7px 7px;border-radius:999px;font-size:13px;font-weight:500}
+.pinned-row .pinned img{width:20px;height:20px;border-radius:50%;object-fit:cover}
 .drawers{display:flex;flex-direction:column;gap:8px;margin-bottom:26px}
 .drawer{border:1px solid var(--line-dark);border-radius:10px;overflow:hidden;background:var(--shell-2);transition:border-color .4s var(--ease)}
 .drawer.open{border-color:var(--brass-dim)}
@@ -400,13 +400,12 @@ input[type=color]{width:44px;height:38px;border:1px solid var(--line);border-rad
 .tk-banners{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px;padding:0 16px 12px}
 .banner{position:relative;display:flex;flex-direction:column;align-items:stretch;width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;padding:0;margin:0;appearance:none}
 .banner.pinned{border-color:#8A6E42;background:#2A1E15;overflow:visible;margin-top:7px}
-.banner.pinned .banner-img{border-radius:7px 7px 0 0}
-.banner.pinned .banner-meta{background:linear-gradient(180deg,#2E2118,#241A12)}
+.banner.pinned .banner.pinned .banner-meta{background:linear-gradient(180deg,#2E2118,#241A12)}
 .banner.pinned .banner-cat{color:#A88A55}
 .banner.pinned .banner-name{color:#D8B778}
 .banner.pinned .banner-sub{color:#A6987F}
 .banner-img{position:relative;width:100%;height:84px;flex:none;overflow:hidden;background:inherit}
-.banner-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.banner-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:0}
 .banner-pin{position:absolute;top:-8px;left:50%;transform:translateX(-50%);z-index:3;background:#B08D52;color:#20160D;
   font-family:'IBM Plex Mono',monospace;font-size:7.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
   padding:3px 9px;border-radius:3px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.45)}
