@@ -1,10 +1,11 @@
 // Atelier service worker.
 // HTML: network-first, so a new deploy is picked up on the next open.
-// Everything else: cache-first, so icons load instantly and offline still works.
-const CACHE = "atelier-v2";
+// Everything else: cache-first, so icons and the ground texture load instantly and offline still works.
+// v3 (10 Oct 2026): velvet.webp, the ground's velvet tile, joins the precache.
+const CACHE = "atelier-v3";
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./icon.png", "./apple-touch-icon.png"])).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./icon.png", "./apple-touch-icon.png", "./velvet.webp"])).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
