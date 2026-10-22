@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zay: privacy</title>
+<meta name="theme-color" content="#1E1510">
+<link rel="icon" href="./icon.png">
+<style>
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(./fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(./fonts/inter.woff2) format('woff2')}
+html,body{margin:0;background:#1E1510}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:#241B12;padding:24px 16px 48px}
+main{max-width:640px;margin:0 auto;background:#F6F1E6;border-radius:12px;padding:28px 22px 32px}
+h1,h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;margin:0}
+h1{font-size:34px;line-height:1.1}
+h2{font-size:22px;margin-top:28px}
+p,li{margin:10px 0}
+ul{padding-left:22px}
+.muted{color:#5E5244;font-size:14px}
+a{color:#241B12}
+.back{display:inline-block;padding:12px 0;color:#5E5244;font-size:14px;text-decoration:none}
+dl{margin:10px 0}dt{font-weight:600;margin-top:12px}dd{margin:2px 0 0}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="./">&larr; Back to Zay</a>
+<h1>Privacy</h1>
+<p class="muted">Last updated 10 October 2026. Plain words on purpose: this is what Zay keeps, where, and why.</p>
+
+<h2>Who runs Zay</h2>
+<p>Zay is a personal wardrobe app made and run by its author in Amman, Jordan. Questions and requests about your data go to <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a>.</p>
+
+<h2>What Zay keeps</h2>
+<p>Only what the app needs to dress you. Nothing is collected for advertising, and nothing is sold.</p>
+<dl>
+<dt>Your email address</dt><dd>Used to sign you in with an emailed code and to tell your account apart from others. We never send marketing email.</dd>
+<dt>Your closet</dt><dd>The pieces you add (names, categories, colours, patterns, tags), their photos, your outfit photos, what you wore and when, saved looks, the looks you turned down, fragrance notes, and a packing list if you plan a trip.</dd>
+<dt>Your profile</dt><dd>What you choose to tell the stylist: height, age, weight, build, how much contrast suits you, coverage preferences, brands you like, and free notes. All of it is optional.</dd>
+<dt>Your selfie</dt><dd>If you add one, it is used to read your colouring so the stylist can judge what suits you. You can remove it at any time.</dd>
+<dt>Your city</dt><dd>A city name you type, or your phone's location if you allow it, so the forecast is for where you are. It is used for weather and nothing else.</dd>
+<dt>Your settings</dt><dd>Theme, laundry limit, score floor and similar preferences.</dd>
+</dl>
+
+<h2>Where it lives</h2>
+<ul>
+<li><b>On your phone</b>, in the browser's own storage, so the app works offline.</li>
+<li><b>In your account</b>, on Supabase servers in Frankfurt, Germany, so a new phone never loses your closet. Each account can read only its own rows and photos; that rule is enforced by the database itself. Photos sit in private storage that is never public.</li>
+<li><b>In backups you make yourself</b>. A full backup is a file that contains your photos. Keep it somewhere safe; it is yours alone.</li>
+</ul>
+
+<h2>Who else sees anything</h2>
+<dl>
+<dt>Anthropic (the stylist)</dt><dd>When you ask the app to read a photo, rate an outfit, or ask the stylist a question, that photo or text is sent to Anthropic's Claude service to be read. It travels through a small relay we run on Cloudflare. The relay keeps a count of how many requests each account makes per day and the size of each, so that the allowance is fair; it never stores the photos or the text. Anthropic processes the content under its own API terms and does not use it to train its models.</dd>
+<dt>Open-Meteo (the weather)</dt><dd>Your city name or coordinates are sent to Open-Meteo to fetch the forecast and to find a city you type. Nothing else about you goes with it.</dd>
+<dt>A linked partner</dt><dd>If you link with someone, they can see your pieces, those pieces' photos and your scoring profile, and you can see theirs, so the app can dress you together. They cannot see your wears, saved looks, selfie, notes, settings or email. Unlink at any time from the You page and the access ends on both sides.</dd>
+<dt>Links out</dt><dd>Shopping and inspiration links open Google, Pinterest or a shop in your browser. From there their policies apply.</dd>
+</dl>
+<p>There are no analytics, no advertising networks, no session recording and no cookies in Zay.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li><b>See everything</b>: Settings, Full backup gives you every piece, photo and setting as a file.</li>
+<li><b>Change anything</b>: edit a piece, your profile or your settings in the app; the account copy follows.</li>
+<li><b>Leave a phone</b>: Sign out wipes the copy on that phone. Your account keeps the rest.</li>
+<li><b>Delete everything</b>: Settings, Delete account removes your photos, your closet, your profile and your login from our servers. It cannot be undone, so the app offers a backup first.</li>
+</ul>
+
+<h2>Age</h2>
+<p>Zay is for people aged 16 and over. If you are younger, please do not create an account.</p>
+
+<h2>Security</h2>
+<p>Everything travels over HTTPS. Sign-in uses a one-time code sent to your email, never a password that could be reused. The database refuses any request for another person's rows. The key that reaches the stylist is held on our relay, never in the app.</p>
+
+<h2>Changes</h2>
+<p>If this page changes in a way that matters, the date at the top moves and the app says so once when you open it.</p>
+</main>
+</body>
+</html>
