@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zay: support</title>
+<meta name="description" content="Help with Zay, the stylist that dresses you from your own closet.">
+<meta name="theme-color" content="#141210">
+<link rel="icon" href="./icon.png">
+<style>
+/* 23 Oct 2026: the support page in the Zay design. Night by default, Day when the phone prefers light.
+   No cards: text on the ground, hairlines between sections. Tokens match design/tokens.json. */
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(./fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;src:url(./fonts/bodoni-moda-italic.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(./fonts/inter.woff2) format('woff2')}
+:root{--shell:#141210;--cream:#F0EBE2;--body:#C9C2B8;--label:#A8A299;--line:#2C2926}
+@media (prefers-color-scheme:light){:root{--shell:#F4F1EB;--cream:#141210;--body:#2A2724;--label:#5E5952;--line:#D6D1C7}}
+html,body{margin:0;background:var(--shell)}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--body);padding:0 0 64px;-webkit-font-smoothing:antialiased}
+main{max-width:560px;margin:0 auto;padding:0 22px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 0 10px}
+.brand{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:22px;color:var(--cream);text-decoration:none}
+.top a.app{font-size:14px;color:var(--label);text-decoration:none;padding:12px 0}
+h1{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:44px;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin:36px 0 10px}
+.lede{color:var(--label);margin:0 0 8px;font-size:14px}
+section{border-top:1px solid var(--line);padding:22px 0 6px;margin-top:22px}
+h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:22px;line-height:1.2;color:var(--cream);margin:0 0 10px}
+p{margin:0 0 12px}
+a{color:var(--cream)}
+.mail{display:inline-block;font-family:'Bodoni Moda',Didot,serif;font-size:22px;color:var(--cream);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--cream)}
+.foot{margin-top:40px;font-size:14px;color:var(--label)}
+.foot a{color:var(--label);padding:10px 0;display:inline-block}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><a class="brand" href="./about.html">Zay</a><a class="app" href="./">Open the app</a></div>
+<h1>Support</h1>
+<p class="lede">Answers to the questions people ask, and a person to write to.</p>
+
+<section>
+<h2>Write to us</h2>
+<p>One person reads this address and answers within a day, usually faster.</p>
+<p><a class="mail" href="mailto:hello@zaystylist.com">hello@zaystylist.com</a></p>
+</section>
+
+<section>
+<h2>The sign-in code did not arrive</h2>
+<p>Codes come from noreply@zaystylist.com within a minute. Check the Junk or Promotions folder once; if it is there, mark it as not junk and the next one lands in your inbox. A code works for ten minutes and once. If nothing arrives, ask for a new one, and if that fails, write to us with the address you used.</p>
+</section>
+
+<section>
+<h2>My clothes are not showing after I changed phone</h2>
+<p>Sign in on the new phone with the same email. Your closet, photos, looks and wears come down from your account on their own. If you never signed in on the old phone, the closet lived only there: open the old phone, go to Settings, and use Backup to save a file, then Restore it on the new one.</p>
+</section>
+
+<section>
+<h2>A photo cut out badly</h2>
+<p>Zay cuts the garment out of the photo so it sits on the page. It works best with the piece laid flat or hung alone against a plain wall in daylight. Open the piece, choose Edit, and retake the photo; the old cut-out is replaced.</p>
+</section>
+
+<section>
+<h2>A score feels wrong</h2>
+<p>Every score shows its reasons. Open the look and read them; if a reason is wrong for you, reject the look and Zay stops suggesting that pairing. If a rule itself seems wrong, tell us which look and why. The rules are written down and they change when someone argues well.</p>
+</section>
+
+<section>
+<h2>Subscriptions, trials and refunds</h2>
+<p>Zay the Stylist renews on its own until you cancel. Cancel any time in your phone's Settings, under your name, then Subscriptions; you keep the stylist until the end of the period you paid for. Refunds are handled by Apple: open reportaproblem.apple.com and choose the purchase. If you reinstall the app or change phones, use Restore purchases in Settings.</p>
+</section>
+
+<section>
+<h2>Delete my account</h2>
+<p>Settings, then Delete account. It removes your account, your closet, your photos and your looks from our servers at once, and it cannot be undone. Save a backup first if you want to keep anything.</p>
+</section>
+
+<section>
+<h2>What Zay keeps about me</h2>
+<p>Only what it needs to dress you, and nothing for advertising. The <a href="./privacy.html">privacy page</a> lists it all in plain words. The <a href="./terms.html">terms</a> are short and also in plain words.</p>
+</section>
+
+<p class="foot">Zay, made in Amman. <a href="./about.html">About</a> &nbsp; <a href="./privacy.html">Privacy</a> &nbsp; <a href="./terms.html">Terms</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zay: The Stylist</title>
+<meta name="description" content="Zay is a stylist in your pocket. One outfit every morning, from the clothes you already own, scored and explained.">
+<meta name="theme-color" content="#141210">
+<link rel="icon" href="./icon.png">
+<meta property="og:title" content="Zay: The Stylist">
+<meta property="og:description" content="One outfit every morning, from the clothes you already own. Scored, explained, built for your city's weather and your day.">
+<style>
+/* 23 Oct 2026: the landing page. Night by default, Day when the phone prefers light. The mark, one line,
+   the four things it does, the privacy line, two links. The real Today screenshot joins when the redesign ships. */
+@font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(./fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;src:url(./fonts/bodoni-moda-italic.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(./fonts/inter.woff2) format('woff2')}
+:root{--shell:#141210;--cream:#F0EBE2;--body:#C9C2B8;--label:#A8A299;--line:#2C2926;--pill:#F0EBE2;--on-pill:#141210}
+@media (prefers-color-scheme:light){:root{--shell:#F4F1EB;--cream:#141210;--body:#2A2724;--label:#5E5952;--line:#D6D1C7;--pill:#141210;--on-pill:#F4F1EB}}
+html,body{margin:0;background:var(--shell)}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--body);padding:0 0 64px;-webkit-font-smoothing:antialiased}
+main{max-width:560px;margin:0 auto;padding:0 22px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 0 10px}
+.brand{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:22px;color:var(--cream);text-decoration:none}
+.top a.sup{font-size:14px;color:var(--label);text-decoration:none;padding:12px 0}
+.hero{padding:48px 0 12px}
+.mark{width:132px;height:108px;color:var(--cream);display:block}
+h1{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:44px;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin:28px 0 14px}
+.hero p{font-size:17px;margin:0 0 26px;max-width:30ch}
+.pill{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:999px;background:var(--pill);color:var(--on-pill);font-weight:600;font-size:15px;text-decoration:none}
+.ghost{display:inline-flex;align-items:center;height:46px;padding:0 18px;border-radius:999px;border:1px solid var(--line);color:var(--cream);font-size:15px;text-decoration:none;margin-left:8px}
+.note{font-size:13px;color:var(--label);margin:14px 0 0}
+section{border-top:1px solid var(--line);padding:24px 0 8px;margin-top:28px}
+h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:var(--cream);margin:0 0 12px}
+p{margin:0 0 12px}
+.row{display:grid;grid-template-columns:1fr;gap:18px;margin-top:6px}
+.row b{display:block;font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:22px;color:var(--cream);margin-bottom:4px}
+.row p{font-size:15px;margin:0}
+.ar{font-family:system-ui,sans-serif;font-size:28px;color:var(--cream);margin:0 0 6px}
+a{color:var(--cream)}
+.foot{margin-top:40px;font-size:14px;color:var(--label)}
+.foot a{color:var(--label);padding:10px 0;display:inline-block}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><span class="brand">Zay</span><a class="sup" href="./support.html">Support</a></div>
+
+<div class="hero">
+<svg class="mark" viewBox="230 234 576 471" fill="currentColor" aria-hidden="true"><use href="#zy"/></svg>
+<h1>A stylist, in your pocket.</h1>
+<p>One outfit every morning from the clothes you already own. Scored, explained, built for your city's weather and your day.</p>
+<a class="pill" href="./">Open Zay</a><a class="ghost" href="./support.html">Questions</a>
+<p class="note">Runs on iPhone from Safari today. The App Store version is on its way.</p>
+</div>
+
+<section>
+<h2>Photograph your clothes once.</h2>
+<p>Zay cuts each piece out and keeps it. From then on it does the thinking.</p>
+<div class="row">
+<div><b>Today</b><p>One outfit, a score out of 100, and one line on why it works. Wear it, ask for another, or save it.</p></div>
+<div><b>Build a look</b><p>Turn the dial to work, dinner, a wedding or the beach and get six looks that fit the weather and your mood.</p></div>
+<div><b>Why it works</b><p>Every look shows its reasoning: colour, formality, contrast against your own colouring, proportion, pattern, season, and what you wore lately.</p></div>
+<div><b>Your closet, your calendar</b><p>A lookbook of your pieces, what you wore and when, a packing list dressed from the forecast, and the one piece worth buying.</p></div>
+</div>
+</section>
+
+<section>
+<p class="ar" lang="ar" dir="rtl">زي</p>
+<h2>The name is the Arabic word for an outfit.</h2>
+<p>Zay is made in Amman for how people dress here and anywhere: weddings and celebrations, heat, modest wear when you want it, and ordinary Tuesdays.</p>
+</section>
+
+<section>
+<h2>Private by design.</h2>
+<p>Nothing is sold and nothing is recommended that you do not already own. Your photos stay in your account. No ads, no trackers. Sign-in is an emailed code, never a password. The <a href="./privacy.html">privacy page</a> says it all in plain words.</p>
+</section>
+
+<p class="foot">Zay, made in Amman. <a href="./support.html">Support</a> &nbsp; <a href="./privacy.html">Privacy</a> &nbsp; <a href="./terms.html">Terms</a> &nbsp; <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a></p>
+</main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="zy"><path d="M 510.5 258 L 525.5 258 L 526.5 259 L 532.5 259 L 541.5 262 Q 555.04 267.46 563 278.5 L 568 287.5 L 571 297.5 L 571 316.5 L 566 330.5 Q 560.7 339.7 552.5 346 Q 540.01 353.01 530 362.5 L 524 372.5 Q 524.75 375.75 523 376.5 L 523 388.5 L 529 400.5 L 636.5 550 L 638 549.5 L 660 516.5 L 677 493.5 L 703 453.5 L 710 437.5 L 711 429.5 L 712 428.5 L 712 417.5 L 710 411.5 L 703.5 405 L 693.5 401 L 682 399.5 L 682.5 398 L 783 398.5 L 782.5 400 L 775.5 400 L 774.5 401 L 766.5 402 L 751.5 409 Q 739.63 416.63 731 427.5 L 711 454.5 L 642 555.5 L 642 644.5 L 643 645.5 L 643 653.5 L 644 654.5 L 644 658.5 L 646 664.5 L 652.5 672 L 659.5 676 L 665.5 677 L 666.5 678 Q 670.5 677 671.5 679 L 683.5 679 L 688 680.5 L 686.5 682 L 565.5 682 L 565 680.5 L 569.5 679 L 576.5 679 L 577.5 678 L 583.5 677 Q 590.33 674.33 594 668.5 L 597 661.5 Q 596.25 658.25 598 657.5 L 598 649.5 L 599 648.5 L 599 563.5 L 545 482.5 L 511 434.5 L 511 379.5 L 515 366.5 L 527.5 353 Q 540.61 345.61 550 334.5 L 555 326.5 L 558 317.5 L 559 304.5 L 558 303.5 L 558 297.5 L 556 291.5 Q 552.15 281.35 544.5 275 L 530.5 267 L 522.5 266 L 521.5 265 L 506.5 265 L 505.5 266 L 501.5 266 L 492.5 269 L 486.5 272 L 475 281.5 L 468 294.5 L 467 304.5 L 464.5 308 L 459.5 309 L 457 306.5 L 457 297.5 Q 461.66 283.66 471.5 275 Q 479.64 267.64 490.5 263 L 499.5 260 L 509.5 259 L 510.5 258 Z " /><path d="M 285.5 397 L 505 397.5 L 505 434.5 L 490 451.5 L 396 568.5 L 338 643.5 L 534.5 644 L 535.5 643 L 547.5 643 L 548.5 642 L 557.5 641 L 566.5 638 L 575.5 633 L 585.5 624 L 587 626.5 L 550.5 680 L 254 679.5 L 280 648.5 L 333 579.5 L 438 447.5 L 461 413.5 L 463 409.5 L 463 405.5 L 461.5 404 L 366.5 404 L 365.5 405 L 358.5 405 L 357.5 406 L 347.5 407 L 332.5 412 L 318.5 420 L 310 427.5 Q 298.1 439.6 291 456.5 L 285 472.5 L 285 475.5 L 282.5 483 L 280 482.5 L 280 474.5 L 281 473.5 L 281 460.5 L 282 459.5 L 282 446.5 L 283 445.5 L 283 429.5 L 284 428.5 L 284 409.5 L 285 408.5 L 285.5 397 Z " /></g></defs></svg>
+</body>
+</html>

@@ -4,10 +4,10 @@
 // v3 (10 Oct 2026): the ground tile joined the precache (gone again in v5).
 // v4 (10 Oct 2026): the three typefaces (fonts/) and the policy pages join it; Google Fonts is gone.
 // v5 (21 Oct 2026): the name is Zay; the velvet is gone (the ground is flat); the icons are the ZY mark.
-const CACHE = "zay-v5";
+const CACHE = "zay-v6";
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./icon.png", "./apple-touch-icon.png", "./fonts/bodoni-moda.woff2", "./fonts/bodoni-moda-italic.woff2", "./fonts/inter.woff2", "./fonts/ibm-plex-mono-400.woff2", "./fonts/ibm-plex-mono-500.woff2", "./privacy.html", "./terms.html"])).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./icon.png", "./apple-touch-icon.png", "./fonts/bodoni-moda.woff2", "./fonts/bodoni-moda-italic.woff2", "./fonts/inter.woff2", "./fonts/ibm-plex-mono-400.woff2", "./fonts/ibm-plex-mono-500.woff2", "./privacy.html", "./terms.html", "./support.html", "./about.html"])).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (e) => {
