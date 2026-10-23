@@ -4,34 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Zay: privacy</title>
-<meta name="theme-color" content="#1E1510">
+<meta name="theme-color" content="#141210">
 <link rel="icon" href="./icon.png">
 <style>
+/* 23 Oct 2026: the support page in the Zay design. Night by default, Day when the phone prefers light.
+   No cards: text on the ground, hairlines between sections. Tokens match design/tokens.json. */
 @font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(./fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;src:url(./fonts/bodoni-moda-italic.woff2) format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(./fonts/inter.woff2) format('woff2')}
-html,body{margin:0;background:#1E1510}
-body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:#241B12;padding:24px 16px 48px}
-main{max-width:640px;margin:0 auto;background:#F6F1E6;border-radius:12px;padding:28px 22px 32px}
-h1,h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;margin:0}
-h1{font-size:34px;line-height:1.1}
-h2{font-size:22px;margin-top:28px}
-p,li{margin:10px 0}
-ul{padding-left:22px}
-.muted{color:#5E5244;font-size:14px}
-a{color:#241B12}
-.back{display:inline-block;padding:12px 0;color:#5E5244;font-size:14px;text-decoration:none}
-dl{margin:10px 0}dt{font-weight:600;margin-top:12px}dd{margin:2px 0 0}
+:root{--shell:#141210;--cream:#F0EBE2;--body:#C9C2B8;--label:#A8A299;--line:#2C2926}
+@media (prefers-color-scheme:light){:root{--shell:#F4F1EB;--cream:#141210;--body:#2A2724;--label:#5E5952;--line:#D6D1C7}}
+html,body{margin:0;background:var(--shell)}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--body);padding:0 0 64px;-webkit-font-smoothing:antialiased}
+main{max-width:560px;margin:0 auto;padding:0 22px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 0 10px}
+.brand{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:22px;color:var(--cream);text-decoration:none}
+.top a.app{font-size:14px;color:var(--label);text-decoration:none;padding:12px 0}
+h1{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:44px;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin:36px 0 10px}
+.lede{color:var(--label);margin:0 0 8px;font-size:14px}
+section{border-top:1px solid var(--line);padding:22px 0 6px;margin-top:22px}
+h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:22px;line-height:1.2;color:var(--cream);margin:0 0 10px}
+p{margin:0 0 12px}
+a{color:var(--cream)}
+.mail{display:inline-block;font-family:'Bodoni Moda',Didot,serif;font-size:22px;color:var(--cream);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--cream)}
+.foot{margin-top:40px;font-size:14px;color:var(--label)}
+.foot a{color:var(--label);padding:10px 0;display:inline-block}
+ul{padding-left:22px;margin:0 0 12px}li{margin:6px 0}
+dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{margin:2px 0 0}
+.lede.date{margin-bottom:0}
 </style>
 </head>
 <body>
 <main>
-<a class="back" href="./">&larr; Back to Zay</a>
+<div class="top"><a class="brand" href="./about.html">Zay</a><a class="app" href="./">Open the app</a></div>
 <h1>Privacy</h1>
-<p class="muted">Last updated 10 October 2026. Plain words on purpose: this is what Zay keeps, where, and why.</p>
+<p class="lede">Last updated 10 October 2026. Plain words on purpose: this is what Zay keeps, where, and why.</p>
 
+<section>
 <h2>Who runs Zay</h2>
 <p>Zay is a personal wardrobe app made and run by its author in Amman, Jordan. Questions and requests about your data go to <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a>.</p>
+</section>
 
+<section>
 <h2>What Zay keeps</h2>
 <p>Only what the app needs to dress you. Nothing is collected for advertising, and nothing is sold.</p>
 <dl>
@@ -42,14 +56,18 @@ dl{margin:10px 0}dt{font-weight:600;margin-top:12px}dd{margin:2px 0 0}
 <dt>Your city</dt><dd>A city name you type, or your phone's location if you allow it, so the forecast is for where you are. It is used for weather and nothing else.</dd>
 <dt>Your settings</dt><dd>Theme, laundry limit, score floor and similar preferences.</dd>
 </dl>
+</section>
 
+<section>
 <h2>Where it lives</h2>
 <ul>
 <li><b>On your phone</b>, in the browser's own storage, so the app works offline.</li>
 <li><b>In your account</b>, on Supabase servers in Frankfurt, Germany, so a new phone never loses your closet. Each account can read only its own rows and photos; that rule is enforced by the database itself. Photos sit in private storage that is never public.</li>
 <li><b>In backups you make yourself</b>. A full backup is a file that contains your photos. Keep it somewhere safe; it is yours alone.</li>
 </ul>
+</section>
 
+<section>
 <h2>Who else sees anything</h2>
 <dl>
 <dt>Anthropic (the stylist)</dt><dd>When you ask the app to read a photo, rate an outfit, or ask the stylist a question, that photo or text is sent to Anthropic's Claude service to be read. It travels through a small relay we run on Cloudflare. The relay keeps a count of how many requests each account makes per day and the size of each, so that the allowance is fair; it never stores the photos or the text. Anthropic processes the content under its own API terms and does not use it to train its models.</dd>
@@ -58,7 +76,9 @@ dl{margin:10px 0}dt{font-weight:600;margin-top:12px}dd{margin:2px 0 0}
 <dt>Links out</dt><dd>Shopping and inspiration links open Google, Pinterest or a shop in your browser. From there their policies apply.</dd>
 </dl>
 <p>There are no analytics, no advertising networks, no session recording and no cookies in Zay.</p>
+</section>
 
+<section>
 <h2>Your choices</h2>
 <ul>
 <li><b>See everything</b>: Settings, Full backup gives you every piece, photo and setting as a file.</li>
@@ -66,15 +86,24 @@ dl{margin:10px 0}dt{font-weight:600;margin-top:12px}dd{margin:2px 0 0}
 <li><b>Leave a phone</b>: Sign out wipes the copy on that phone. Your account keeps the rest.</li>
 <li><b>Delete everything</b>: Settings, Delete account removes your photos, your closet, your profile and your login from our servers. It cannot be undone, so the app offers a backup first.</li>
 </ul>
+</section>
 
+<section>
 <h2>Age</h2>
 <p>Zay is for people aged 16 and over. If you are younger, please do not create an account.</p>
+</section>
 
+<section>
 <h2>Security</h2>
 <p>Everything travels over HTTPS. Sign-in uses a one-time code sent to your email, never a password that could be reused. The database refuses any request for another person's rows. The key that reaches the stylist is held on our relay, never in the app.</p>
+</section>
 
+<section>
 <h2>Changes</h2>
 <p>If this page changes in a way that matters, the date at the top moves and the app says so once when you open it.</p>
+</section>
+
+<p class="foot">Zay, made in Amman. <a href="./about.html">About</a> &nbsp; <a href="./support.html">Support</a> &nbsp; <a href="./terms.html">Terms</a></p>
 </main>
 </body>
 </html>

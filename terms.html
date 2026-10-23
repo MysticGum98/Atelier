@@ -4,69 +4,94 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Zay: terms</title>
-<meta name="theme-color" content="#1E1510">
+<meta name="theme-color" content="#141210">
 <link rel="icon" href="./icon.png">
 <style>
+/* 23 Oct 2026: the support page in the Zay design. Night by default, Day when the phone prefers light.
+   No cards: text on the ground, hairlines between sections. Tokens match design/tokens.json. */
 @font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400 500;font-display:swap;src:url(./fonts/bodoni-moda.woff2) format('woff2')}
+@font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;src:url(./fonts/bodoni-moda-italic.woff2) format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(./fonts/inter.woff2) format('woff2')}
-html,body{margin:0;background:#1E1510}
-body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:#241B12;padding:24px 16px 48px}
-main{max-width:640px;margin:0 auto;background:#F6F1E6;border-radius:12px;padding:28px 22px 32px}
-h1,h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;margin:0}
-h1{font-size:34px;line-height:1.1}
-h2{font-size:22px;margin-top:28px}
-p,li{margin:10px 0}
-ul{padding-left:22px}
-.muted{color:#5E5244;font-size:14px}
-a{color:#241B12}
-.back{display:inline-block;padding:12px 0;color:#5E5244;font-size:14px;text-decoration:none}
+:root{--shell:#141210;--cream:#F0EBE2;--body:#C9C2B8;--label:#A8A299;--line:#2C2926}
+@media (prefers-color-scheme:light){:root{--shell:#F4F1EB;--cream:#141210;--body:#2A2724;--label:#5E5952;--line:#D6D1C7}}
+html,body{margin:0;background:var(--shell)}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--body);padding:0 0 64px;-webkit-font-smoothing:antialiased}
+main{max-width:560px;margin:0 auto;padding:0 22px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 0 10px}
+.brand{font-family:'Bodoni Moda',Didot,serif;font-style:italic;font-size:22px;color:var(--cream);text-decoration:none}
+.top a.app{font-size:14px;color:var(--label);text-decoration:none;padding:12px 0}
+h1{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:44px;line-height:.95;letter-spacing:-.02em;color:var(--cream);margin:36px 0 10px}
+.lede{color:var(--label);margin:0 0 8px;font-size:14px}
+section{border-top:1px solid var(--line);padding:22px 0 6px;margin-top:22px}
+h2{font-family:'Bodoni Moda',Didot,serif;font-weight:400;font-size:22px;line-height:1.2;color:var(--cream);margin:0 0 10px}
+p{margin:0 0 12px}
+a{color:var(--cream)}
+.mail{display:inline-block;font-family:'Bodoni Moda',Didot,serif;font-size:22px;color:var(--cream);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--cream)}
+.foot{margin-top:40px;font-size:14px;color:var(--label)}
+.foot a{color:var(--label);padding:10px 0;display:inline-block}
+ul{padding-left:22px;margin:0 0 12px}li{margin:6px 0}
+dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{margin:2px 0 0}
+.lede.date{margin-bottom:0}
 </style>
 </head>
 <body>
 <main>
-<a class="back" href="./">&larr; Back to Zay</a>
+<div class="top"><a class="brand" href="./about.html">Zay</a><a class="app" href="./">Open the app</a></div>
 <h1>Terms</h1>
-<p class="muted">Last updated 24 October 2026. Short on purpose, and complete: everything an app sold through the App Store needs is here, in plain words.</p>
+<p class="lede">Last updated 24 October 2026. Short on purpose, and complete: everything an app sold through the App Store needs is here, in plain words.</p>
 
+<section>
 <h2>The agreement</h2>
 <ul>
 <li>These terms are an agreement between you and Zay's author, Saif Sharawi, in Amman, Jordan. By using Zay you accept them. If you do not accept them, do not use Zay.</li>
 <li>You need to be 16 or older to use Zay.</li>
 <li>On iPhone, Apple has its own terms for the App Store and for purchases. Where they overlap with these, Apple's apply to the purchase and these apply to the app.</li>
 </ul>
+</section>
 
+<section>
 <h2>What Zay is</h2>
 <p>Zay is a personal wardrobe app. It keeps the clothes you add, puts outfits together from them by colour, proportion and occasion, and can ask an AI stylist to read photos and answer questions. It is made and run by its author in Amman, Jordan.</p>
+</section>
 
+<section>
 <h2>Your account</h2>
 <ul>
 <li>You sign in with a code sent to your email. Keep that inbox yours; anyone who can read it can sign in as you.</li>
 <li>One account is for one person. A linked partner has their own account and chooses what to share.</li>
 <li>You are responsible for what is done with your account until you tell us it has been misused.</li>
 </ul>
+</section>
 
+<section>
 <h2>Your licence to use Zay</h2>
 <ul>
 <li>You get a personal licence to use Zay on devices you own or control. It cannot be sold, lent or transferred.</li>
 <li>Do not copy, sell, rent or redistribute Zay, take it apart to see how it works, or read the service with scripts or automated tools. Do not try to get around the limits, the sign-in or the purchase.</li>
 <li>Do not use Zay to break the law or to harm other people.</li>
 </ul>
+</section>
 
+<section>
 <h2>Your content</h2>
 <ul>
 <li>Your photos, pieces, notes, looks and the record of what you wore are yours. Zay gets only the permission it needs to store them, show them back to you, and send them to the stylist when you ask.</li>
 <li>Only upload photos you have the right to use. If a photo shows another person, make sure they are fine with it.</li>
 <li>You can export everything as a backup at any time, and delete everything with one button in Settings.</li>
-<li>If something in Zay infringes your rights, write to <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a> with the details and we remove it.</li>
+<li>If something in Zay infringes your rights, write to <a href="mailto:legal@zaystylist.com">legal@zaystylist.com</a> with the details and we remove it.</li>
 </ul>
+</section>
 
+<section>
 <h2>What is free and what is paid</h2>
 <ul>
 <li>Free: a closet of up to 70 pieces, with photo reading for each, the daily outfit, building looks for an occasion, every score with its reasons, logging what you wore, and 10 uses of the stylist to try it.</li>
 <li>Zay the Stylist, the subscription, adds a closet without limits, the stylist's notes, questions and outfit ratings within a daily allowance, the calendar of what you wore, packing for trips, shopping advice, dressing together with a partner, and a colour analysis of your own colouring.</li>
 <li>Nothing you added while free is ever removed. If you stop subscribing, you keep everything you can see on the free plan.</li>
 </ul>
+</section>
 
+<section>
 <h2>Subscriptions and purchases</h2>
 <ul>
 <li>On iPhone, Zay the Stylist is bought through Apple, monthly or yearly, at the price shown before you buy. The first month is free when a trial is offered; it turns into a paid subscription at its end unless you cancel before.</li>
@@ -75,7 +100,9 @@ a{color:#241B12}
 <li>Refunds for purchases made through Apple are handled by Apple under Apple's rules. Restore purchases in Settings brings a subscription or a one-time purchase back after a reinstall or a new phone.</li>
 <li>If the price changes, you are told first and the new price applies only after you agree, as Apple requires.</li>
 </ul>
+</section>
 
+<section>
 <h2>The stylist</h2>
 <ul>
 <li>Scores, suggestions, colour analyses and answers are opinions from rules and from an AI model. They are there to help you decide, not to decide for you, and they can be wrong.</li>
@@ -83,35 +110,45 @@ a{color:#241B12}
 <li>The colour analysis reads one photo of your face and keeps only the result; the photo itself is not stored.</li>
 <li>Do not use the stylist to generate content that is unlawful, harmful or about a person who has not agreed to it.</li>
 </ul>
+</section>
 
+<section>
 <h2>Ending</h2>
 <ul>
 <li>You can stop any time. Delete account in Settings removes your account and everything in it from our servers at once.</li>
 <li>Accounts used to abuse the service or other people, or to get around these terms, can be closed. If that happens you are told why, and your data is deleted after 30 days unless the law requires otherwise.</li>
 <li>Ending an account does not refund the current period; Apple's refund rules apply to what you paid Apple.</li>
 </ul>
+</section>
 
+<section>
 <h2>What belongs to whom</h2>
 <ul>
 <li>Your content is yours, as above.</li>
 <li>Zay itself, its name and mark, its design, its scoring rules and its code belong to its author. The licence above is the only right you get in them.</li>
 <li>If you send ideas or feedback, we may use them to improve Zay without owing you anything, and without any claim on your content.</li>
 </ul>
+</section>
 
+<section>
 <h2>Availability and changes</h2>
 <ul>
 <li>Zay is offered as it is, without a promise that it is always available or free of mistakes. Keep a backup of anything you would mind losing.</li>
 <li>Features, limits, prices and these terms can change. When something that matters changes, the date at the top moves and the app says so once. A price change for an existing subscription follows the rule above.</li>
 <li>If Zay is ever discontinued, you are told at least 30 days before, with time to export your backup.</li>
 </ul>
+</section>
 
+<section>
 <h2>Liability</h2>
 <ul>
 <li>To the extent the law allows, Zay's author is not liable for losses that come from using the app, from following its suggestions, or from the app being unavailable.</li>
 <li>Where liability cannot be excluded, it is limited to what you paid for Zay in the twelve months before the claim.</li>
 <li>Nothing here limits rights you have by law that cannot be limited, or liability for fraud, or for death or injury caused by negligence.</li>
 </ul>
+</section>
 
+<section>
 <h2>Apple</h2>
 <p>If you use Zay on an iPhone or iPad, Apple asks that the following is said plainly:</p>
 <ul>
@@ -125,15 +162,24 @@ a{color:#241B12}
 <li>You must also follow any third-party terms that apply when you use Zay, such as your mobile data plan.</li>
 <li>Apple and its subsidiaries are third-party beneficiaries of these terms and may enforce them against you.</li>
 </ul>
+</section>
 
+<section>
 <h2>Law</h2>
 <p>These terms are governed by the laws of Jordan, and disputes go to the courts of Amman. If you live in a place whose consumer law gives you more protection, that protection still applies, and you may also use your local courts where the law gives you that right. Before anything formal, write to us; most things are solved by a reply.</p>
+</section>
 
+<section>
 <h2>Privacy</h2>
 <p>What Zay keeps and who sees it is on the <a href="./privacy.html">privacy page</a>.</p>
+</section>
 
+<section>
 <h2>Contact</h2>
-<p>Saif Sharawi, Amman, Jordan. <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a></p>
+<p>Saif Sharawi, Amman, Jordan. <a href="mailto:legal@zaystylist.com">legal@zaystylist.com</a></p>
+</section>
+
+<p class="foot">Zay, made in Amman. <a href="./about.html">About</a> &nbsp; <a href="./support.html">Support</a> &nbsp; <a href="./privacy.html">Privacy</a></p>
 </main>
 </body>
 </html>
