@@ -38,11 +38,11 @@ dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{marg
 <main>
 <div class="top"><a class="brand" href="./about.html">Zay</a><a class="app" href="./">Open the app</a></div>
 <h1>Privacy</h1>
-<p class="lede">Last updated 10 October 2026. Plain words on purpose: this is what Zay keeps, where, and why.</p>
+<p class="lede">Last updated 24 October 2026. Plain words on purpose: this is what Zay keeps, where, and why.</p>
 
 <section>
 <h2>Who runs Zay</h2>
-<p>Zay is a personal wardrobe app made and run by its author in Amman, Jordan. Questions and requests about your data go to <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a>.</p>
+<p>Zay is a personal wardrobe app made and run by its author in Amman, Jordan. Questions go to <a href="mailto:hello@zaystylist.com">hello@zaystylist.com</a>. Requests about your data, including deletion, go to <a href="mailto:privacy@zaystylist.com">privacy@zaystylist.com</a>.</p>
 </section>
 
 <section>
@@ -53,8 +53,11 @@ dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{marg
 <dt>Your closet</dt><dd>The pieces you add (names, categories, colours, patterns, tags), their photos, your outfit photos, what you wore and when, saved looks, the looks you turned down, fragrance notes, and a packing list if you plan a trip.</dd>
 <dt>Your profile</dt><dd>What you choose to tell the stylist: height, age, weight, build, how much contrast suits you, coverage preferences, brands you like, and free notes. All of it is optional.</dd>
 <dt>Your selfie</dt><dd>If you add one, it is used to read your colouring so the stylist can judge what suits you. You can remove it at any time.</dd>
+<dt>Your colour analysis</dt><dd>If you ask for one, a photo of your face is sent to the stylist, read, and not kept anywhere. Only the result stays: your season, the colours that suit you and the ones to avoid. You can correct it or remove it in your profile.</dd>
+<dt>Your subscription</dt><dd>Whether you subscribe, which plan, and when it ends, so the app knows what to unlock. Apple handles the payment; we never see your card.</dd>
+<dt>Counts</dt><dd>How many pieces are in your closet against the free limit, and how many times you have used the stylist, so the free plan and the daily allowance can be applied fairly.</dd>
 <dt>Your city</dt><dd>A city name you type, or your phone's location if you allow it, so the forecast is for where you are. It is used for weather and nothing else.</dd>
-<dt>Your settings</dt><dd>Theme, laundry limit, score floor and similar preferences.</dd>
+<dt>Your settings</dt><dd>World, laundry limit, score floor and similar preferences.</dd>
 </dl>
 </section>
 
@@ -70,7 +73,8 @@ dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{marg
 <section>
 <h2>Who else sees anything</h2>
 <dl>
-<dt>Anthropic (the stylist)</dt><dd>When you ask the app to read a photo, rate an outfit, or ask the stylist a question, that photo or text is sent to Anthropic's Claude service to be read. It travels through a small relay we run on Cloudflare. The relay keeps a count of how many requests each account makes per day and the size of each, so that the allowance is fair; it never stores the photos or the text. Anthropic processes the content under its own API terms and does not use it to train its models.</dd>
+<dt>Anthropic (the stylist)</dt><dd>When you ask the app to read a photo, rate an outfit, or ask the stylist a question, that photo or text is sent to Anthropic's Claude service to be read. It travels through a small relay we run on Cloudflare. The relay keeps a count of how many requests each account makes per day and the size of each, so that the allowance is fair; it never stores the photos or the text, only the counts. Anthropic processes the content under its own API terms and does not use it to train its models.</dd>
+<dt>Apple and RevenueCat (the subscription)</dt><dd>When you subscribe on iPhone, Apple takes the payment under its own privacy policy. RevenueCat, the service that checks subscriptions for us, receives the purchase receipt from Apple and your account id, so that the subscription follows your account to a new phone. It gets no name, no email, no photos and nothing about your closet.</dd>
 <dt>Open-Meteo (the weather)</dt><dd>Your city name or coordinates are sent to Open-Meteo to fetch the forecast and to find a city you type. Nothing else about you goes with it.</dd>
 <dt>A linked partner</dt><dd>If you link with someone, they can see your pieces, those pieces' photos and your scoring profile, and you can see theirs, so the app can dress you together. They cannot see your wears, saved looks, selfie, notes, settings or email. Unlink at any time from the You page and the access ends on both sides.</dd>
 <dt>Links out</dt><dd>Shopping and inspiration links open Google, Pinterest or a shop in your browser. From there their policies apply.</dd>
@@ -84,7 +88,8 @@ dl{margin:0 0 12px}dt{font-weight:500;color:var(--cream);margin-top:12px}dd{marg
 <li><b>See everything</b>: Settings, Full backup gives you every piece, photo and setting as a file.</li>
 <li><b>Change anything</b>: edit a piece, your profile or your settings in the app; the account copy follows.</li>
 <li><b>Leave a phone</b>: Sign out wipes the copy on that phone. Your account keeps the rest.</li>
-<li><b>Delete everything</b>: Settings, Delete account removes your photos, your closet, your profile and your login from our servers. It cannot be undone, so the app offers a backup first.</li>
+<li><b>Delete everything</b>: Settings, Delete account removes your photos, your closet, your profile and your login from our servers at once. It cannot be undone, so the app offers a backup first.</li>
+<li><b>If we close an account</b> for abuse, as the terms allow, its data is deleted 30 days later unless the law requires us to keep something.</li>
 </ul>
 </section>
 
